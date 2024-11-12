@@ -7,7 +7,7 @@ trigger:
 
 
 pool:
-  vmImage: ubuntu-latest
+  name: Azure Pipelines
 
 resources:
 - repo: self
