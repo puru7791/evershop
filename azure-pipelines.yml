@@ -32,6 +32,12 @@ stages:
         configMode: 'manual'
         cliProjectKey: 'Evershop-ecommerce_Evershop-ecommerce_AZMfTF-C5yvYUCCqjDCZ'
         cliSources: '.'
+    - task: SonarQubeAnalyze@7
+      inputs:
+        jdkversion: 'JAVA_HOME_17_X64'
+    - task: SonarQubePublish@7
+      inputs:
+        pollingTimeoutSec: '300'
     - task: Docker@2
       displayName: Build an image
       inputs:
